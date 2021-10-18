@@ -38,3 +38,12 @@ docker run --name neighbourhood-db --mount type=bind,source="$(pwd)",dst="/code"
 docker exec -it neighbourhood-db psql -U postgres
 
 \i code/database/2_seed.sql
+
+
+\q to quit postgres
+
+
+  - `cd server-postgresql` / `cd server-mongodb`
+       - `docker compose up`
+       - to stop and keep data `docker compose down`
+       - to stop and remove all artifacts `docker-compose down --volumes --remove-orphans`
