@@ -1,4 +1,4 @@
-INSERT INTO neighbourhood (name, age, household_number)
+INSERT INTO neighbourhood (name, age, household
 VALUES
 ('Benjamin','24','1'),
 ('Boone','22','1'),
