@@ -5,7 +5,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-const neighbourhoodRoutes = require('./controllers/neighbourhood')
+const neighbourhoodRoutes = require('./controllers/neighbourhood.js')
 const housesRoutes = require('./controllers/houses')
 const addressRoutes = require('./controllers/address')
 
