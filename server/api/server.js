@@ -7,11 +7,11 @@ server.use(express.json());
 
 const neighbourhoodRoutes = require('./controllers/neighbourhood.js')
 const housesRoutes = require('./controllers/houses')
-const addressRoutes = require('./controllers/address')
+const addressesRoutes = require('./controllers/addresses')
 
 server.use('/neighbourhood', neighbourhoodRoutes)
 server.use('/houses', housesRoutes)
-server.use('/address', addressRoutes)
+server.use('/addresses', addressesRoutes)
 
 const port = process.env.PORT || 3000;
 

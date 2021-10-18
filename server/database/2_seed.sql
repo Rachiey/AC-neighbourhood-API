@@ -16,7 +16,7 @@ VALUES
 ('31 Daisy Grove','5'),
 ('32 Blossom Road','6');
 
-INSERT INTO address (postcode, street)
+INSERT INTO addresses (postcode, street)
 VALUES
 ('AC21 BR2','22 Blossom Road'),
 ('AC21 OW4','47 Orchid Way'),
