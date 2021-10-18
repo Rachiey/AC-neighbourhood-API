@@ -29,9 +29,12 @@ Create documentation for your API on a tool of your choice eg.
 If not using a README.md file for your documentation, create a GitHub repo with a README.md containing a link to the documentation
 When first making the repo, make a working branch so you can PR back to master/main later on and request review!
 
+
+
+
+
 docker run --name neighbourhood-db --mount type=bind,source="$(pwd)",dst="/code" -e POSTGRES_PASSWORD=neighbourpass -d postgres
 
 docker exec -it neighbourhood-db psql -U postgres
 
-\i code/1_setup.sql
-
+\i code/database/2_seed.sql
