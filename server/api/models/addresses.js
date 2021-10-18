@@ -1,26 +1,23 @@
 const db = require ('../dbConfig')
 
-const db = require ('../dbConfig')
-
-class Neighbourhood {
+class Addresses {
     constructor(data){
         this.id = data.id
-        this.name = data.name
-        this.age = data.age
-        this.household_number = data.household_number
+        this.postcode = data.postcode
+        this.street = data.street
     }
 
     static get all() {
         return new Promise (async (resolve, reject) => {
             try {
-                const neighbourhoodData = await db.query(`SELECT * FROM neighbourhood;`)
-                const neighbourhood = neighbourhoodData.rows.map(d => new Neighbourhood(d))
-                resolve(neighbourhood);
+                const addressesData = await db.query(`SELECT * FROM addresses;`)
+                const addresses = addressesData.rows.map(d => new Addresses(d))
+                resolve(addresses);
             } catch (err) {
-                reject("Error retrieving neighbourhood")
+                reject("Error retrieving addresses")
             }
         })
     }
 }
 
-module.exports = Neighbourhood;
+module.exports = Addresses;
